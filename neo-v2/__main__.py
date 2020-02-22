@@ -15,7 +15,7 @@ from aiohttp import web
 
 API_REQUIRED_PARAMS = ["number_of_cycles", "phone_code", "phone"]
 
-os.chdir(os.path.join(pkg_resources.get_distribution("neo").location, "neo"))
+os.chdir(os.path.join(pkg_resources.get_distribution("neo-v2").location, "neo-v2"))
 
 app = web.Application()
 routes = web.RouteTableDef()
@@ -42,7 +42,7 @@ def main(ip: str, port: int, skip_updates: bool, repair: bool):
 
 def update(force: bool = False):
     if force:
-        subprocess.run(["pip3", "install", "neo", "--force-reinstall"],)
+        subprocess.run(["pip3", "install", "neo-v2", "--force-reinstall"],)
 
 
 def open_url(url: str):
