@@ -1,1 +1,1 @@
-import b0mb3r.__main__
+import neo.__main__
